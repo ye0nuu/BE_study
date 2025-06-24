@@ -1,12 +1,23 @@
 // Quiz3 - 5x5 배열을 받아서 빙고 갯수를 반환하는 bingoCnt()를 작성
 
+import java.util.Scanner;
+
 public class Quiz0624_3 {
     public static void main(String[] args) {
-        int [][] bingoArr = {{1, 0, 0, 0, 0},
-                            {1, 1, 1, 1, 1},
-                            {1, 0, 0, 0, 0},
-                            {1, 0, 0, 0, 0},
-                            {1, 0, 0, 0, 0}};
+//        int [][] bingoArr = {{1, 0, 0, 0, 0},
+//                            {1, 1, 1, 1, 1},
+//                            {1, 0, 0, 0, 0},
+//                            {1, 0, 0, 0, 0},
+//                            {1, 0, 0, 0, 0}};
+
+        Scanner sc = new Scanner(System.in);
+
+        int[][] bingoArr = new int[5][5];
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                bingoArr[i][j] = sc.nextInt();
+            }
+        }
 
         System.out.println(bingoCnt(bingoArr));
     }

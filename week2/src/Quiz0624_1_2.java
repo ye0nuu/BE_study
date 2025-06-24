@@ -9,11 +9,21 @@ public class Quiz0624_1_2 {
 
         int count = 0;
 
+        int[] numArr = new int[10];
         int[] arr1 = new int[3];
         int[] arr2 = new int[3];
 
-        for (int i=0; i<3; i++) {
-            arr1[i] = (int)(Math.random() * 9) + 1;
+        for (int i=0; i<numArr.length; i++) {   // numArr에 1~9까지의 값을 저장
+            numArr[i] = i+1;
+        }
+        for (int i=0; i<10; i++) {  // numArr 섞기
+            int n = (int)(Math.random() * 9);
+            int tmp = numArr[0];
+            numArr[0] = numArr[n];
+            numArr[n] = tmp;
+        }
+        for (int i=0; i<arr1.length; i++) {
+            arr1[i] = numArr[i];
         }
 
         while (true) {
