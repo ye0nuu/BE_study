@@ -1,3 +1,5 @@
+// 7-1) 상속
+
 class Tv {
     boolean power;
     int channel;

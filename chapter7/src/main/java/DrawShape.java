@@ -1,3 +1,5 @@
+// 7-2) 클래스 간의 관계 결정
+
 class DrawShape {
     public static void main(String[] args) {
         Point[] p = { new Point(100, 100),
